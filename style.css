@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Graphik";
+    src: url("fonts/GraphikBlack.otf");
+    src: url("fonts/GraphikRegular.otf");
+}
+
+:root{
+    --background: rgb(3, 40, 40);
+    --lettering:rgb(230, 217, 202);
+    --fluo:rgb(255, 150, 30);
+}
+
+body{
+    background-color:var(--background);
+    font-family: "Graphik";
+    font-weight: lighter;
+}
+
+header{
+    background-color: var(--fluo);
+}
+
+header svg{
+    margin-bottom: -4px;
+}
+
+.flex_col{
+    display:flex;
+    flex-flow: column nowrap;
+}
+
+.flex_row{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.centering{
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    color:var(--lettering);
+    width:100%;
+}
+
+.nav_container{
+    width:100%;
+}
+
+.nav_container > a{
+    width:2%;
+    text-decoration: none;
+    padding: 0 5% 0 5%;
+    color:var(--background);
+    border-bottom: 0.5px solid pink;
+ 
+}
+
+.first_row > a{
+    margin: 0 2% 0 2%;
+}
+
+.second_row > a{
+    margin: 2% 3% 0 3%;
+}
+
+.nav_container a:hover{
+    color:brown;
+    border-bottom: 0.5px solid rgb(255, 150, 30);
+}
+
+.main_container{
+    margin:5% 0 5% 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_card{
+    width:40%;
+    height:240vh;
+    max-height:700px;
+    margin:5% 0 5% 0;
+    
+}
+
+.main_card_img_container{
+    object-fit: cover;
+}
+
+.main_card_img_container img{
+    width:100%;
+}
+
+.main_card_legend{
+    color: var(--fluo);
+}
