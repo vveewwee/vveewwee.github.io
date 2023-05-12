@@ -42,6 +42,7 @@ header svg{
 .container{
     color:var(--lettering);
     width:100%;
+    height: 25vh;
 }
 
 .nav_container{
@@ -54,7 +55,30 @@ header svg{
     padding: 0 5% 0 5%;
     color:var(--background);
     border-bottom: 0.5px solid pink;
- 
+    transform: rotate(316deg);
+}
+
+.nav_container>a:nth-child(2){
+    color: brown;
+    font-size: 1.5em;
+    border-bottom: 0.5px solid rgb(255, 150, 30);
+}
+
+/*
+:not(.nav_container a:nth-child(1):hover){
+    border-bottom: none;
+} */
+
+.nav_container a:nth-child(2):hover{
+    color: rgb(129, 19, 162);
+    border-bottom: 0.5px solid pink; 
+}
+
+ .nav_container>a:nth-child(3){
+   color: rgb(129, 19, 162);
+   font-size: 2em;
+   font-weight: 900;
+   transform: rotate(316deg);
 }
 
 .first_row > a{
@@ -70,6 +94,7 @@ header svg{
     border-bottom: 0.5px solid rgb(255, 150, 30);
 }
 
+
 .main_container{
     margin:5% 0 5% 0;
     align-items: center;
@@ -81,9 +106,10 @@ header svg{
     height:240vh;
     max-height:700px;
     margin:5% 0 5% 0;
-    
 }
-
+.main_card:nth-child(1){
+    padding-bottom: 5%;
+}
 .main_card_img_container{
     object-fit: cover;
 }
