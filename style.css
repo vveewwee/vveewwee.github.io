@@ -1,19 +1,26 @@
 @font-face {
-    font-family: "Graphik";
+    font-family: "Graphik_black";
     src: url("fonts/GraphikBlack.otf");
+}
+@font-face {
+    font-family: "Graphik_reg" ;
     src: url("fonts/GraphikRegular.otf");
 }
 
+
 :root{
-    --background: rgb(3, 40, 40);
-    --lettering:rgb(230, 217, 202);
+    --background: #032828;
+    --lettering:rgb(170, 55, 252);
+    --underline:rgb(255, 192, 203);
     --fluo:rgb(255, 150, 30);
+    --link:rgb(129, 19, 162);
+    --link-hover: rgb(149, 7, 7);
 }
 
 body{
     background-color:var(--background);
-    font-family: "Graphik";
-    font-weight: lighter;
+    font-family: "Graphik_reg";
+    font-weight:bolder;
 }
 
 header{
@@ -39,10 +46,15 @@ header svg{
     justify-content: center;
 }
 
-.container{
-    color:var(--lettering);
+.header_container{
     width:100%;
-    height: 25vh;
+    position: absolute;
+    top:2%;
+}
+
+.path_text{
+    font-family: "Graphik_black";
+    font-size: 1.6em;
 }
 
 .nav_container{
@@ -54,12 +66,12 @@ header svg{
     text-decoration: none;
     padding: 0 5% 0 5%;
     color:var(--background);
-    border-bottom: 0.5px solid pink;
+    border-bottom: 0.5px solid var(--underline);
     transform: rotate(316deg);
 }
 
 .nav_container>a:nth-child(2){
-    color: brown;
+    color: var(--link-hover);
     font-size: 1.5em;
     border-bottom: 0.5px solid rgb(255, 150, 30);
 }
@@ -69,13 +81,18 @@ header svg{
     border-bottom: none;
 } */
 
+.nav_container a:hover{
+    color: var(--underline);
+    border-bottom: 0.5px solid rgb(255, 150, 30);
+}
+
 .nav_container a:nth-child(2):hover{
-    color: rgb(129, 19, 162);
+    color: var(--link);
     border-bottom: 0.5px solid pink; 
 }
 
  .nav_container>a:nth-child(3){
-   color: rgb(129, 19, 162);
+   color: var(--link);
    font-size: 2em;
    font-weight: 900;
    transform: rotate(316deg);
@@ -88,12 +105,6 @@ header svg{
 .second_row > a{
     margin: 2% 3% 0 3%;
 }
-
-.nav_container a:hover{
-    color:brown;
-    border-bottom: 0.5px solid rgb(255, 150, 30);
-}
-
 
 .main_container{
     margin:5% 0 5% 0;
